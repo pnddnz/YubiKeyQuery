@@ -1,0 +1,24 @@
+﻿@model IEnumerable<YubiKeyRequest_0._2_.Models.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-lg-left">
+    <p>Заявка на закупку ключей безопасаности YubiKey</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th><th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var key in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelitem => key.Name)</td>
+                    <td>@Html.DisplayFor(modelitem => key.PriceUSD)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
